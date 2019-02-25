@@ -1,0 +1,39 @@
+
+<!-- Edit Modal HTML -->
+<div *ngIf="person" id="editEmployeeModal" >
+		<div class="modal-dialog">
+			<div class="modal-content">
+					<div class="modal-header">						
+						<h4 class="modal-title">{{person.name | uppercase}} Address</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">					
+						<div class="form-group">
+							<label>Address Street : {{person.address.street}}</label>
+            </div>
+            <div class="form-group">
+                <label>Address City : {{person.address.city}}</label>
+              </div>
+              <div class="form-group">
+                  <label>Address State : {{person.address.state}}</label>
+                </div>
+                <div class="form-group">
+                    <label>Address Zip : {{person.address.zip}}</label>
+                  </div>
+									
+					</div>
+					<div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal" routerLink="/company">
+              Home
+            </button>
+            <button class="btn btn-info" routerLink="/Companyedit/{{company.id}}">
+              Edit
+            </button>
+					</div>
+			</div>
+		</div>
+	</div>
+
+
+
+

@@ -1,0 +1,43 @@
+	<!-- add Modal HTML -->
+	<div id="addEmployeeModal" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          
+            <div class="modal-header">						
+              <h4 class="modal-title">Add Person</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">					
+              <div class="form-group">
+                <label>Name</label>
+                <input   [(ngModel)]="personData.name" placeholder="Person Name" type="text" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label>Address: street</label>
+                <input [(ngModel)]="personData.address.street" placeholder="Street" type="text" class="form-control" >
+              </div>
+              <div class="form-group">
+                  <label>Address: City</label>
+                  <input [(ngModel)]="personData.address.city" placeholder="City" type="text" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label>Address: State</label>
+                    <input [(ngModel)]="personData.address.state" placeholder="Street" type="text" class="form-control" >
+                  </div>
+                  <div class="form-group">
+                      <label>Address: Zip</label>
+                      <input [(ngModel)]="personData.address.zip" placeholder="Zip" type="text" class="form-control" >
+                    </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" routerLink="/person">
+                  Cancel
+              </button>
+              <button (click)="addPerson()" class="btn btn-success" >Add</button>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+<div>
+ 

@@ -1,0 +1,45 @@
+
+<!-- Edit Modal HTML -->
+<div id="editEmployeeModal" >
+		<div class="modal-dialog">
+			<div class="modal-content">
+					<div class="modal-header">						
+						<h4 class="modal-title">Edit Person</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">					
+						<div class="form-group">
+							<label>Name</label>
+							<input  [(ngModel)]="personData.name"  type="text" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label>Address: Street</label>
+							<input  [(ngModel)]="personData.address.street" type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Address: City</label>
+                <input  [(ngModel)]="personData.address.city" type="text" class="form-control" required>
+              </div>
+              <div class="form-group">
+                  <label>Address: State</label>
+                  <input  [(ngModel)]="personData.address.state" type="text" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Address: Zip</label>
+                    <input  [(ngModel)]="personData.address.zip" type="text" class="form-control" required>
+                  </div>
+									
+					</div>
+					<div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal" routerLink="/person">
+                Cancel
+						</button>
+						<button (click)="updatePerson()" class="btn btn-info" value="Save">Save</button>
+					</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
