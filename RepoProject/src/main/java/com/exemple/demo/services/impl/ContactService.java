@@ -1,7 +1,10 @@
 package com.exemple.demo.services.impl;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
+
+import javax.persistence.EntityManager;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +16,8 @@ import com.exemple.demo.repositories.ContactRepository;
 public class ContactService {
 	@Autowired
 	ContactRepository contactRepository;
+	
+	
 	
 	public void createContact(Contact p) {
 		contactRepository.save(p);		
@@ -30,4 +35,9 @@ public class ContactService {
 		return contactRepository.findAll();
 	}
 
+	public List<Contact> findAllContacts() {
+		
+			  return contactRepository.findAllContacts() ;
+			
+	}
 }

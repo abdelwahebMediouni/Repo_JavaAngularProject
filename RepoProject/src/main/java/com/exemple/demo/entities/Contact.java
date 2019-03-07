@@ -8,13 +8,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)
+@NamedQueries({
+	@NamedQuery(name = "Contact.findAllContacts", query = "SELECT c From Contact c")
+})
 public class Contact extends BaseEntity implements Serializable  {
 	
 	@Column
 	private String name;
-//
+
 //	@OneToMany(cascade = CascadeType.ALL,
 //			  fetch = FetchType.EAGER,
 //			  mappedBy ="Address")

@@ -10,8 +10,8 @@ import com.exemple.demo.entities.Person;
 
 public interface PersonRepository extends JpaRepository<Person, Long>{
 	
-@Query("select c from Office c")
-public List<Office> chercher();
+@Query("select E from Person E WHERE E.id = :id")
+public Person chercher(long id);
 	
 }
 

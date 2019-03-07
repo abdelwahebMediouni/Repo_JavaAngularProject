@@ -21,6 +21,12 @@ public class Person extends Contact {
 		
 	}
 
+	@Override
+	public String toString() {
+		return "Person [address=" + address + ", getAddress()=" + getAddress() + ", getName()=" + getName()
+				+ ", getId()=" + getId() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
+	}
 	public Address getAddress() {
 		return address;
 	}
