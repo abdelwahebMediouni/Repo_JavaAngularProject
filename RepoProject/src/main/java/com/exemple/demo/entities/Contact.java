@@ -20,18 +20,29 @@ public class Contact extends BaseEntity implements Serializable  {
 	
 	@Column
 	private String name;
+	
+	private Long phoneNumber;
 
 //	@OneToMany(cascade = CascadeType.ALL,
 //			  fetch = FetchType.EAGER,
 //			  mappedBy ="Address")
 //	private List<Address> address;
 	
+	public Long getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(Long phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
 	public Contact() {
 	}
 	
-	public Contact(String name) {
+	public Contact(String name,Long phoneNumber) {
 		super();
 		this.name = name;
+		this.phoneNumber = phoneNumber;
 		
 	}
 

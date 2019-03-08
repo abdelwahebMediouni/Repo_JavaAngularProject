@@ -13,8 +13,8 @@ import javax.persistence.OneToMany;
 public class Company extends Contact{
 
 	
-	public Company(String name, List<Office> offices) {
-		super(name);
+	public Company(String name,Long phoneNumber, List<Office> offices) {
+		super(name,phoneNumber);
 		this.offices = offices;
 	}
 	public Company() {
