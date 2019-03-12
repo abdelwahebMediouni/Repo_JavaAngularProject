@@ -52,9 +52,9 @@ public class RepoProjectApplication implements CommandLineRunner {
 //		contactRepository.save(new Contact(" 45 rue jean lenon paris",null));
 //		contactRepository.save(new Contact(" 09 rue thevez alfonce ",null));
 //		addressRepository.save(new Address("eee","dddd","dddd","dddd",null));
-		List<Country> offices = countryRepository.findAll();
-		
-	offices.stream().forEach(System.out::println);
+//		List<Country> offices = countryRepository.findAll();
+//		
+//	offices.stream().forEach(System.out::println);
 //		
 		//personService.createPersonne(new Person("Ali", new Address("xxm","xxx","xxxx","xxxxx")));
 		//personService.ChercherPerson(130);
@@ -66,7 +66,7 @@ public class RepoProjectApplication implements CommandLineRunner {
 //		else
 //			System.out.println("nothing to print");
 //		
-//		contactService.findAllContacts().stream().forEach(System.out::println);
+		contactService.listeContacts().stream().forEach(System.out::println);
 		//contactService.createContact(new Contact(" 49 rue jean lenon paris"));
 		//System.out.println(contactService.findAllContacts());
 

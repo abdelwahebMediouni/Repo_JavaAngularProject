@@ -35,9 +35,9 @@ public class ContactService {
 		return contactRepository.findAll();
 	}
 
-	public List<Contact> findAllContacts() {
-		
-			  return contactRepository.findAllContacts() ;
-			
-	}
+//	public List<Contact> findAllContacts() {
+//		
+//			  return contactRepository.findAllContacts() ;
+//			
+//	}
 }

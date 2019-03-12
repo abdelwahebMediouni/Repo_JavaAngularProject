@@ -13,9 +13,7 @@ import org.hibernate.annotations.NamedQueries;
 import org.hibernate.annotations.NamedQuery;
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)
-@NamedQueries({
-	@NamedQuery(name = "Contact.findAllContacts", query = "SELECT c From Contact c")
-})
+
 public class Contact extends BaseEntity implements Serializable  {
 	
 	@Column
@@ -50,6 +48,13 @@ public class Contact extends BaseEntity implements Serializable  {
 	public String getName() {
 		return name;
 	}
+	@Override
+	public String toString() {
+		return "Contact [name=" + name + ", phoneNumber=" + phoneNumber + ", getPhoneNumber()=" + getPhoneNumber()
+				+ ", getName()=" + getName() + ", getId()=" + getId() + ", getClass()=" + getClass() + ", hashCode()="
+				+ hashCode() + ", toString()=" + super.toString() + "]";
+	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
