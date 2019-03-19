@@ -44,7 +44,7 @@ public class OfficeRestService {
 		officeRepository.saveAndFlush(office);
 	}
 	@RequestMapping(value="/Offices/{id}", method= RequestMethod.DELETE)
-	public boolean deletePerson(@PathVariable Long id) {
+	public boolean deleteOffice(@PathVariable Long id) {
 		officeRepository.deleteById(id);
 		return true;
 	}
